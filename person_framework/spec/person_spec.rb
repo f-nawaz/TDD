@@ -28,13 +28,20 @@ end
     expect(subject.phone_numbers).to eq ["07712345678","02012345678"]
   end
 
-  it "Should remove email addresses from the array emails using the index number and then return the current phone array list" do
-    subject.add_phone("07712345678")
-    subject.add_phone("02012345678")
+  it "Should remove email addresses from the array emails using the index number and then return the current emails array list" do
+    subject.add_email("joe@work.com")
+    subject.add_email("joe.bloggs@work.com")
     subject.remove_email(0)
+
+    expect(subject.emails).to eq ["joe.bloggs@work.com"]
   end
 
+  it "Should remove phone numbers from the array phone_numbers using the index number and then return the current phone array list" do
+    subject.add_phone("07712345678")
+    subject.add_phone("02012345678")
 
+    subject.remove_phone(0)
 
-
+    expect(subject.phone_numbers).to eq ["02012345678"]
+  end
 end
