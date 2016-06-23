@@ -28,4 +28,9 @@ class Person
   def remove_phone(index)
     @phone_numbers.delete_at(index)
   end
+
+  # def to_s
+  #   return "#{fullname} was born on #{@dob.strftime('%F')}.\n Their email addresses are:[#{@emails.join(" , ")}]\n Their phone numbers are [#{@phone_numbers.join(" , ")}]"
+  # end
+  
 end

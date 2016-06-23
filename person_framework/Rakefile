@@ -1,0 +1,4 @@
+task :ls2 do
+  exec('ls')
+  exec('pwd')
+end
