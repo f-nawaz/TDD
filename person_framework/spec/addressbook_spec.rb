@@ -25,4 +25,15 @@ describe "AddressBook class" do
     expect(book.address_book.length).to eq 2
   end
 
+  it "should list the address book when using the method list" do
+    person1 = Person.new("joe", "blogs", "1 jan 1990")
+    person2 = Person.new("andy", "nother", "2 Jan 1995")
+    book.add(person1)
+    book.add(person2)
+    expect(book.address_book.length).to eq puts "" puts "Address Book" puts "------------" puts "Entry 1: Joe Blogs\nEntry 2: Andy Nother"
+
+  end
+
+
+
 end
