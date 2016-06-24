@@ -43,14 +43,15 @@ end
     expect(subject.phone_numbers).to eq ["02012345678"]
   end
 
-#   it "Should show the person object details when calling to_s" do
-#     subject.add_email("joe@foo.com")
-#     subject.add_phone("07712345678")
-#     subject.add_phone("02012345678")
-#
-#     expect(subject.to_s).to eq "Joe Bloggs was born on 1990-01-01.\n Their email addresses are:
-# [\"joe@foo.com\"].\n Their phone numbers are [\"07712345678\", \"02012345678\"]"
-#   end
+  it "Should show the person object details when calling to_s" do
+    skip "Need framework for text"
+    subject.add_email("joe@foo.com")
+    subject.add_phone("07712345678")
+    subject.add_phone("02012345678")
+
+    expect(subject.to_s).to eq "Joe Bloggs was born on 1990-01-01.\n Their email addresses are:
+[\"joe@foo.com\"].\n Their phone numbers are [\"07712345678\", \"02012345678\"]"
+  end
 
 
 end
