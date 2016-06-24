@@ -16,4 +16,13 @@ describe "AddressBook class" do
     expect{book.add(1)}.to raise_error(ArgumentError)
   end
 
+  it "Should add people into the address book from family members" do
+    family1 = FamilyMember.new("joe", "blogs", "1 jan 1990")
+    family2 = FamilyMember.new("andy", "nother", "2 Jan 1995")
+    book = AddressBook.new
+    book.add(family1)
+    book.add(family2)
+    expect(book.address_book.length).to eq 2
+  end
+
 end
