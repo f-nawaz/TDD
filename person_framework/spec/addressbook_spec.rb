@@ -26,7 +26,7 @@ describe "AddressBook class" do
   end
 
   it "should list the address book when using the method list" do
-    skip "no idea how to format it"
+    skip "Need framework for diplying text"
     book = AddressBook.new
     person1 = Person.new("joe", "blogs", "1 jan 1990")
     person2 = Person.new("andy", "nother", "2 Jan 1995")
