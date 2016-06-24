@@ -1,4 +1,5 @@
-require 'YAML'
+require 'yaml'
+
 class AddressBook
   attr_reader :address_book
   def initialize()
@@ -25,7 +26,14 @@ class AddressBook
   def load_YAML(path)
     # path = "../../basic-ruby/phonebook/phonebook.yml"
     file = YAML.load(File.open(path))
-    address_book << file[Book]
+    file["Book"].each do |p|
+    person = Person.new(p["fname"], p["lname"], p["dob"])
+
+    p["numbers"].each {|n| person.add_phone(n)}
+
+    p["emails"].each {|e| person.add_email(e)}
+      address_book << person
+    end
   end
 
 
